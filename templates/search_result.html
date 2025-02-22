@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Web2Vec Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/crawl_result.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <a href="/">Back</a>
+    <h2>Search Result ({{ query }})</h2>
+    <div class="result">
+        {% for result in data %}
+        <div class="page-result">
+            <div class="page-result-header" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                <div class="left-column">
+                    <div class="page-result-title" style="font-weight: bold">{{ result['title'] }}</div>
+                    <div class="page-result-url" style="font-size: 13px">{{ result['link'] }}</div>
+                </div>
+                <div class="right-column">
+                    <div class="page-result-run"><a href="/?url={{result['link']}}" style="color:white; font-weight: bold;">Select</a></div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename= 'js/crawl_result.js') }}"></script>
+</body>
+</html>

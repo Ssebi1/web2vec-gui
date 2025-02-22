@@ -1,0 +1,258 @@
+{
+    "url": "https://sebastian.dancau.net/project?id=2&lng=en",
+    "title": "Daily Play - Dancau Sebastian",
+    "html": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n\r\n    <link rel=\"shortcut icon\" href=\"/favicon.ico?v=1.1\">\r\n    <link rel=\"apple-touch-icon\" href=\"../public/apple_icon.png\" />\r\n\r\n\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Daily Play - Dancau Sebastian</title>\r\n    <link rel=\"stylesheet\" href=\"projectStyle.css\">\r\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"\r\n        integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\r\n</head>\r\n\r\n<body>\r\n\r\n    <div class=\"main\">\r\n        <a href=\"/\" class=\"return\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i></a>\r\n        <div class=\"projectTitle\">Daily Play</div>\r\n        <div class=\"categories\">\r\n            \r\n            <div class=\"category\">Web</div>\r\n            \r\n            <div class=\"category\">Game</div>\r\n            \r\n            <div class=\"category\">Html</div>\r\n            \r\n            <div class=\"category\">Css</div>\r\n            \r\n            <div class=\"category\">Javascript</div>\r\n            \r\n        </div>\r\n        <div class=\"photoCarousell\">\r\n            <div class=\"photoContainer\"></div>\r\n            <div class=\"photoSelection\">\r\n                \r\n                <div class=\"dot \"></div>\r\n                \r\n                <div class=\"dot \"></div>\r\n                \r\n                <div class=\"dot \"></div>\r\n                \r\n            </div>\r\n        </div>\r\n\r\n        \r\n\r\n        \r\n        <div class=\"links\">\r\n            <div class=\"smallTitle\">Links</div>\r\n            <div class=\"bigTitle\">View source code and project</div>\r\n            <div class=\"flexContainer\">\r\n                \r\n                <a href=\"https://github.com/Ssebi1/DailyPlay\" target=\"_blank\"><img\r\n                        src=\"https://github-readme-stats.vercel.app/api/pin/?username=ssebi1&repo=DailyPlay&show_owner=true\"\r\n                        alt=\"github\">\r\n                </a>\r\n                \r\n\r\n                \r\n                <div class=\"website\">Get to website for a live demo.</div>\r\n                \r\n\r\n            </div>\r\n        </div>\r\n        \r\n\r\n        <input type=\"hidden\" class=\"imagesArray\" value=\"./Images/DailyPlay1.jpg,./Images/DailyPlay2.jpg,./Images/DailyPlay3.jpg\">\r\n        <input type=\"hidden\" class=\"descriptionText\" value=\"\">\r\n        <input type=\"hidden\" class=\"websiteLink\" value=\"https://dailyplay.herokuapp.com/\">\r\n\r\n    </div>\r\n\r\n    <script>\r\n        const images = document.querySelector('.imagesArray').value.split(',');\r\n        const dots = document.querySelectorAll('.dot');\r\n\r\n        function init() {\r\n            activateDot(0);\r\n            changeImage(0);\r\n        }\r\n\r\n        init();\r\n\r\n        function activateDot(id) {\r\n            dots.forEach(el => {\r\n                el.classList.remove('active');\r\n                el.classList.add('unactive');\r\n            })\r\n            dots[id].classList.remove('unactive');\r\n            dots[id].classList.add('active');\r\n        }\r\n\r\n        function changeImage(id) {\r\n            const imageContainer = document.querySelector('.photoContainer');\r\n            imageContainer.style.backgroundImage = `url(${images[id]})`;\r\n        }\r\n\r\n        for (let i = 0; i < dots.length; i++) {\r\n            dots[i].addEventListener('click', () => {\r\n                activateDot(i);\r\n                changeImage(i);\r\n            })\r\n        }\r\n\r\n        // Open website event\r\n        document.querySelector('.website').addEventListener('click', () => {\r\n            const url = document.querySelector('.websiteLink').value;\r\n            window.open(url, '_blank');\r\n\r\n        })\r\n\r\n    </script>\r\n</body>\r\n\r\n</html>",
+    "response_headers": {
+        "b'Server'": "[b'nginx/1.18.0 (Ubuntu)']",
+        "b'Date'": "[b'Sat, 22 Feb 2025 11:20:42 GMT']",
+        "b'Content-Type'": "[b'text/html; charset=utf-8']",
+        "b'X-Powered-By'": "[b'Express']",
+        "b'Etag'": "[b'W/\"eae-PD4L7jeUNv7JmXyMhxAWvX+X630\"']",
+        "b'Vary'": "[b'Accept-Encoding']"
+    },
+    "status_code": 200,
+    "extractors": [
+        {
+            "name": "DNSFeatures",
+            "result": {
+                "domain": "sebastian.dancau.net",
+                "records": [
+                    {
+                        "record_type": "A",
+                        "ttl": 600,
+                        "values": [
+                            "165.227.244.36"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "HtmlBodyFeatures",
+            "result": {
+                "contains_forms": false,
+                "contains_obfuscated_scripts": false,
+                "contains_suspicious_keywords": false,
+                "body_length": 172,
+                "num_titles": 0,
+                "num_images": 1,
+                "num_links": 2,
+                "script_length": 1,
+                "special_characters": 2,
+                "script_to_special_chars_ratio": 0.5,
+                "script_to_body_ratio": 0.005813953488372093,
+                "body_to_special_char_ratio": 86.0,
+                "iframe_redirection": 1,
+                "mouse_over_effect": 0,
+                "right_click_disabled": 1,
+                "num_scripts_http": 0,
+                "num_styles_http": 0,
+                "num_iframes_http": 0,
+                "num_external_scripts": 0,
+                "num_external_styles": 2,
+                "num_external_iframes": 0,
+                "num_meta_tags": 2,
+                "num_forms": 0,
+                "num_forms_post": 0,
+                "num_forms_get": 0,
+                "num_forms_external_action": 0,
+                "num_hidden_elements": 0,
+                "num_safe_anchors": 1,
+                "num_media_http": 0,
+                "num_media_external": 1,
+                "num_email_forms": 0,
+                "num_internal_links": 0,
+                "favicon_url": "/favicon.ico?v=1.1",
+                "logo_url": null,
+                "found_forms": [],
+                "found_images": [
+                    {
+                        "src": "https://github-readme-stats.vercel.app/api/pin/?username=ssebi1&repo=DailyPlay&show_owner=true",
+                        "alt": "github"
+                    }
+                ],
+                "found_anchors": [
+                    {
+                        "href": "/",
+                        "class": [
+                            "return"
+                        ]
+                    },
+                    {
+                        "href": "https://github.com/Ssebi1/DailyPlay",
+                        "target": "_blank"
+                    }
+                ],
+                "found_media": [
+                    {
+                        "src": "https://github-readme-stats.vercel.app/api/pin/?username=ssebi1&repo=DailyPlay&show_owner=true",
+                        "alt": "github"
+                    }
+                ],
+                "copyright": null
+            }
+        },
+        {
+            "name": "CertificateFeatures",
+            "result": {
+                "subject": {},
+                "issuer": {},
+                "not_before": "0001-01-01T00:00:00",
+                "not_after": "0001-01-01T00:00:00",
+                "is_valid": false,
+                "validity_message": "No certificate found",
+                "is_trusted": false,
+                "trust_message": "No certificate found"
+            }
+        },
+        {
+            "name": "URLGeoFeatures",
+            "result": {
+                "url": "https://sebastian.dancau.net/project?id=2&lng=en",
+                "country_code": "DE",
+                "asn": 14061
+            }
+        },
+        {
+            "name": "URLLexicalFeatures",
+            "result": {
+                "count_dot_url": 2,
+                "count_dash_url": 0,
+                "count_underscore_url": 0,
+                "count_slash_url": 3,
+                "count_question_url": 1,
+                "count_equals_url": 2,
+                "count_at_url": 0,
+                "count_ampersand_url": 1,
+                "count_exclamation_url": 0,
+                "count_space_url": 0,
+                "count_tilde_url": 0,
+                "count_comma_url": 0,
+                "count_plus_url": 0,
+                "count_asterisk_url": 0,
+                "count_hash_url": 0,
+                "count_dollar_url": 0,
+                "count_percent_url": 0,
+                "url_length": 48,
+                "tld_amount_url": 1,
+                "count_dot_domain": 2,
+                "count_dash_domain": 0,
+                "count_underscore_domain": 0,
+                "count_slash_domain": 0,
+                "count_question_domain": 0,
+                "count_equals_domain": 0,
+                "count_at_domain": 0,
+                "count_ampersand_domain": 0,
+                "count_exclamation_domain": 0,
+                "count_space_domain": 0,
+                "count_tilde_domain": 0,
+                "count_comma_domain": 0,
+                "count_plus_domain": 0,
+                "count_asterisk_domain": 0,
+                "count_hash_domain": 0,
+                "count_dollar_domain": 0,
+                "count_percent_domain": 0,
+                "domain_length": 20,
+                "vowel_count_domain": 8,
+                "domain_in_ip_format": false,
+                "domain_contains_keywords": false,
+                "count_dot_directory": 0,
+                "count_dash_directory": 0,
+                "count_underscore_directory": 0,
+                "count_slash_directory": 0,
+                "count_question_directory": 0,
+                "count_equals_directory": 0,
+                "count_at_directory": 0,
+                "count_ampersand_directory": 0,
+                "count_exclamation_directory": 0,
+                "count_space_directory": 0,
+                "count_tilde_directory": 0,
+                "count_comma_directory": 0,
+                "count_plus_directory": 0,
+                "count_asterisk_directory": 0,
+                "count_hash_directory": 0,
+                "count_dollar_directory": 0,
+                "count_percent_directory": 0,
+                "directory_length": 0,
+                "count_dot_parameters": 0,
+                "count_dash_parameters": 0,
+                "count_underscore_parameters": 0,
+                "count_slash_parameters": 0,
+                "count_question_parameters": 0,
+                "count_equals_parameters": 2,
+                "count_at_parameters": 0,
+                "count_ampersand_parameters": 1,
+                "count_exclamation_parameters": 0,
+                "count_space_parameters": 0,
+                "count_tilde_parameters": 0,
+                "count_comma_parameters": 0,
+                "count_plus_parameters": 0,
+                "count_asterisk_parameters": 0,
+                "count_hash_parameters": 0,
+                "count_dollar_parameters": 0,
+                "count_percent_parameters": 0,
+                "parameters_length": 11,
+                "tld_presence_in_arguments": 0,
+                "number_of_parameters": 2,
+                "email_present_in_url": false,
+                "domain_entropy": 3.2841837197791888,
+                "url_depth": 1,
+                "uses_shortening_service": null,
+                "is_ip": false
+            }
+        },
+        {
+            "name": "WhoisFeatures",
+            "result": {
+                "domain_name": [
+                    "DANCAU.NET"
+                ],
+                "registrar": "GoDaddy.com, LLC",
+                "whois_server": "whois.godaddy.com",
+                "referral_url": null,
+                "updated_date": [
+                    "2024-09-21T13:09:58",
+                    "2024-09-20T15:59:12"
+                ],
+                "creation_date": [
+                    "2024-09-20T20:59:11",
+                    "2024-09-20T15:59:11"
+                ],
+                "expiration_date": [
+                    "2025-09-20T20:59:11",
+                    "2025-09-20T15:59:11"
+                ],
+                "name_servers": [
+                    "NS03.DOMAINCONTROL.COM",
+                    "NS04.DOMAINCONTROL.COM",
+                    "NS65.DOMAINCONTROL.COM",
+                    "NS66.DOMAINCONTROL.COM"
+                ],
+                "status": [
+                    "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                    "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+                    "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                    "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+                ],
+                "emails": [
+                    "abuse@godaddy.com"
+                ],
+                "dnssec": "unsigned",
+                "name": "Registration Private",
+                "org": "Domains By Proxy, LLC",
+                "address": [
+                    "DomainsByProxy.com",
+                    "100 S. Mill Ave, Suite 1600"
+                ],
+                "city": "Tempe",
+                "state": "Arizona",
+                "zipcode": null,
+                "country": "US",
+                "raw": {
+                    "domain": "dancau.net",
+                    "text": "   Domain Name: DANCAU.NET\r\n   Registry Domain ID: 2918695625_DOMAIN_NET-VRSN\r\n   Registrar WHOIS Server: whois.godaddy.com\r\n   Registrar URL: http://www.godaddy.com\r\n   Updated Date: 2024-09-21T13:09:58Z\r\n   Creation Date: 2024-09-20T20:59:11Z\r\n   Registry Expiry Date: 2025-09-20T20:59:11Z\r\n   Registrar: GoDaddy.com, LLC\r\n   Registrar IANA ID: 146\r\n   Registrar Abuse Contact Email: abuse@godaddy.com\r\n   Registrar Abuse Contact Phone: 480-624-2505\r\n   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\r\n   Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited\r\n   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\r\n   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\r\n   Name Server: NS03.DOMAINCONTROL.COM\r\n   Name Server: NS04.DOMAINCONTROL.COM\r\n   Name Server: NS65.DOMAINCONTROL.COM\r\n   Name Server: NS66.DOMAINCONTROL.COM\r\n   DNSSEC: unsigned\r\n   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\r\n>>> Last update of whois database: 2025-02-22T11:20:22Z <<<\r\n\r\nFor more information on Whois status codes, please visit https://icann.org/epp\r\n\r\nNOTICE: The expiration date displayed in this record is the date the\r\nregistrar's sponsorship of the domain name registration in the registry is\r\ncurrently set to expire. This date does not necessarily reflect the expiration\r\ndate of the domain name registrant's agreement with the sponsoring\r\nregistrar.  Users may consult the sponsoring registrar's Whois database to\r\nview the registrar's reported date of expiration for this registration.\r\n\r\nTERMS OF USE: You are not authorized to access or query our Whois\r\ndatabase through the use of electronic processes that are high-volume and\r\nautomated except as reasonably necessary to register domain names or\r\nmodify existing registrations; the Data in VeriSign Global Registry\r\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\r\ninformation purposes only, and to assist persons in obtaining information\r\nabout or related to a domain name registration record. VeriSign does not\r\nguarantee its accuracy. By submitting a Whois query, you agree to abide\r\nby the following terms of use: You agree that you may use this Data only\r\nfor lawful purposes and that under no circumstances will you use this Data\r\nto: (1) allow, enable, or otherwise support the transmission of mass\r\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\r\nor facsimile; or (2) enable high volume, automated, electronic processes\r\nthat apply to VeriSign (or its computer systems). The compilation,\r\nrepackaging, dissemination or other use of this Data is expressly\r\nprohibited without the prior written consent of VeriSign. You agree not to\r\nuse electronic processes that are automated and high-volume to access or\r\nquery the Whois database except as reasonably necessary to register\r\ndomain names or modify existing registrations. VeriSign reserves the right\r\nto restrict your access to the Whois database in its sole discretion to ensure\r\noperational stability.  VeriSign may restrict or terminate your access to the\r\nWhois database for failure to abide by these terms of use. VeriSign\r\nreserves the right to modify these terms at any time.\r\n\r\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\r\nRegistrars.\r\nDomain Name: dancau.net\r\nRegistry Domain ID: 2918695625_DOMAIN_NET-VRSN\r\nRegistrar WHOIS Server: whois.godaddy.com\r\nRegistrar URL: https://www.godaddy.com\r\nUpdated Date: 2024-09-20T15:59:12Z\r\nCreation Date: 2024-09-20T15:59:11Z\r\nRegistrar Registration Expiration Date: 2025-09-20T15:59:11Z\r\nRegistrar: GoDaddy.com, LLC\r\nRegistrar IANA ID: 146\r\nRegistrar Abuse Contact Email: abuse@godaddy.com\r\nRegistrar Abuse Contact Phone: +1.4806242505\r\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\r\nDomain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\r\nDomain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited\r\nDomain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\r\nRegistry Registrant ID: Not Available From Registry\r\nRegistrant Name: Registration Private\r\nRegistrant Organization: Domains By Proxy, LLC\r\nRegistrant Street: DomainsByProxy.com\r\nRegistrant Street: 100 S. Mill Ave, Suite 1600\r\nRegistrant City: Tempe\r\nRegistrant State/Province: Arizona\r\nRegistrant Postal Code: 85281\r\nRegistrant Country: US\r\nRegistrant Phone: +1.4806242599\r\nRegistrant Phone Ext:\r\nRegistrant Fax: \r\nRegistrant Fax Ext:\r\nRegistrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=dancau.net\r\nRegistry Tech ID: Not Available From Registry\r\nTech Name: Registration Private\r\nTech Organization: Domains By Proxy, LLC\r\nTech Street: DomainsByProxy.com\r\nTech Street: 100 S. Mill Ave, Suite 1600\r\nTech City: Tempe\r\nTech State/Province: Arizona\r\nTech Postal Code: 85281\r\nTech Country: US\r\nTech Phone: +1.4806242599\r\nTech Phone Ext:\r\nTech Fax: \r\nTech Fax Ext:\r\nTech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=dancau.net\r\nName Server: NS03.DOMAINCONTROL.COM\r\nName Server: NS04.DOMAINCONTROL.COM\r\nName Server: NS65.DOMAINCONTROL.COM\r\nName Server: NS66.DOMAINCONTROL.COM\r\nDNSSEC: unsigned\r\nURL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/\r\n>>> Last update of WHOIS database: 2025-02-22T11:20:42Z <<<\r\nFor more information on Whois status codes, please visit https://icann.org/epp\r\n\r\nTERMS OF USE: The data contained in this registrar's Whois database, while believed by the\r\nregistrar to be reliable, is provided \"as is\" with no guarantee or warranties regarding its\r\naccuracy. This information is provided for the sole purpose of assisting you in obtaining\r\ninformation about domain name registration records. Any use of this data for any other purpose\r\nis expressly forbidden without the prior written permission of this registrar. By submitting\r\nan inquiry, you agree to these terms and limitations of warranty. In particular, you agree not\r\nto use this data to allow, enable, or otherwise support the dissemination or collection of this\r\ndata, in part or in its entirety, for any purpose, such as transmission by e-mail, telephone,\r\npostal mail, facsimile or other means of mass unsolicited, commercial advertising or solicitations\r\nof any kind, including spam. You further agree not to use this data to enable high volume, automated\r\nor robotic electronic processes designed to collect or compile this data for any purpose, including\r\nmining this data for your own personal or commercial purposes. Failure to comply with these terms\r\nmay result in termination of access to the Whois database. These terms may be subject to modification\r\nat any time without notice.\r\n\r\n**NOTICE** This WHOIS server is being retired. Please use our RDAP service instead.\r\n\r\n"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Web2Vec Crawl Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/crawl_result.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <a href="/">Back</a>
+    <h2>Crawl Result ({{ url }})</h2>
+    <div class="result">
+        {% for page in data %}
+            <div class="page-result" id="{{page['url']}}">
+                <div class="page-result-header">{{page['url']}}</div>
+                <div class="page-result-content" style="display: none;">
+                    <div class="page-result-navigation">
+                        {% for extractor in page['extractors'] %}
+                            <div class="extractor" id="{{ extractor['name'] }}-{{page['url']}}">{{ extractor['name'] }}</div>
+                        {% endfor %}
+                    </div>
+                    {% for extractor in page['extractors'] %}
+                        <div class="page-result-result" id="result-{{ extractor['name'] }}-{{page['url']}}" style="display: none;">
+                            {{ extractor['result'] }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename= 'js/crawl_result.js') }}"></script>
+</body>
+</html>

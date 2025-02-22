@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Web2Vec Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/index.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <form action="crawl" method="post">
+        <span style="font-size:12px">Or <a href="/search">search for a webpage</a></span>
+        <div class="search">
+            <input type="url" id="url" name="url" placeholder="Enter URL" value="{{predefined_url}}">
+            <input type="number" id="depth" name="depth" placeholder="Enter Depth" min="1" max="5" value="1">
+            <input type="submit" value="Submit" id="submit">
+        </div>
+        <div class="filters">
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-html" name="extractors" value="html" checked>
+                <label for="extractor-html">HTML Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-dns" name="extractors" value="dns">
+                <label for="extractor-dns">DNS Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-http" name="extractors" value="http">
+                <label for="extractor-http">HTTP Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-certificate" name="extractors" value="certificate">
+                <label for="extractor-certificate">Certificate Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-url-geo" name="extractors" value="url_geo">
+                <label for="extractor-url-geo">URL Geo Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-url-lexical" name="extractors" value="url_lexical">
+                <label for="extractor-url-lexical">URL Lexical Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-whois" name="extractors" value="whois">
+                <label for="extractor-whois">WHOIS Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-google-index" name="extractors" value="google_index">
+                <label for="extractor-google-index">Google Index Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-open-page-rank" name="extractors" value="open_page_rank">
+                <label for="extractor-open-page-rank">Open Page Rank Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-similar-web" name="extractors" value="similar_web">
+                <label for="extractor-similar-web">Similar Web Extractor</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="extractor-url-haus" name="extractors" value="url_haus">
+                <label for="extractor-url-haus">URL Haus Extractor</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

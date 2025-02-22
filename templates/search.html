@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Web2Vec Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/index.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <form action="search" method="post">
+        <span style="font-size:12px">Or <a href="/">enter URL directly</a></span>
+        <div class="search">
+            <input type="text" id="query" name="query" placeholder="Search term" style="width: 100%;">
+            <input type="submit" value="Submit" id="submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
